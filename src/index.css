@@ -41,6 +41,7 @@ header {
   top: 0;
   margin-bottom: 60px;
   width: 100%;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
 header div a {
@@ -82,6 +83,12 @@ header nav ul li a:hover {
   height: 500px;
   border-radius: 50px;
   box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.75);
+}
+
+.login-form h2,
+.registro-form h2 {
+  color: white;
+  margin-bottom: 30px;
 }
 
 

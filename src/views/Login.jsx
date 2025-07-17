@@ -5,6 +5,7 @@ const Login = () => {
   return (
     <Layout>
       <form className='login-form'>
+        <h2>Login</h2>
         <label>Email:</label>
         <input type="email" placeholder='Email' />
         <label>Contraseña:</label>
