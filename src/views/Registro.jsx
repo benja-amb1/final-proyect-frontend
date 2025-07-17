@@ -1,8 +1,11 @@
 import React from 'react'
+import { Layout } from '../components/Layout'
 
 const Registro = () => {
   return (
-    <div>Registro</div>
+    <Layout>
+      <div>Registro</div>
+    </Layout>
   )
 }
 
