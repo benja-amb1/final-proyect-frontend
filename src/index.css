@@ -28,11 +28,19 @@ a {
   text-decoration: none;
 }
 
+main {
+  padding-top: 120px;
+}
+
 /* HEADER */
 
 header {
   background-color: #1e1e1e;
   padding: 1rem;
+  position: fixed;
+  top: 0;
+  margin-bottom: 60px;
+  width: 100%;
 }
 
 header div a {
@@ -107,7 +115,7 @@ header nav ul li a:hover {
 
 .login-form button:hover,
 .registro-form button:hover {
-  background-color: var(--color-7);
+  background-color: var(--color-6);
   transform: scale(1.1);
 }
 
