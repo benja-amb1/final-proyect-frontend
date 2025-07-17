@@ -3,3 +3,37 @@
   padding: 0;
   font-family: "Saira", sans-serif;
 }
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: rgb(30, 30, 30);
+  padding: 1rem;
+}
+
+header div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header a img {
+  width: 5%;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+header nav ul li a {
+  color: white;
+}
