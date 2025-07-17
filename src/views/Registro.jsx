@@ -12,7 +12,7 @@ const Registro = () => {
         <label>Contraseña:</label>
         <input type="password" placeholder='Contraseña' />
 
-
+        <button>Registrarse</button>
       </form>
     </Layout>
   )
