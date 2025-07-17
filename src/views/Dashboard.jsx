@@ -4,9 +4,13 @@ import { Layout } from '../components/Layout'
 const Dashboard = () => {
   return (
     <Layout>
-      <label>Añadir nuevo producto:</label>
-      <input type="text" placeholder='Nombre del producto...' />
-      <button>Añadir</button>
+      <form className='agregar-form'>
+        <h2>Agregar Producto</h2>
+        <label>Agregar nuevo producto:</label>
+        <input type="text" placeholder='Nombre del producto...' />
+        <button>Agregar</button>
+      </form>
+
     </Layout>
   )
 }

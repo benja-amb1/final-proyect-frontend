@@ -70,9 +70,10 @@ header nav ul li a:hover {
   color: var(--color-4);
 }
 
-/* LOGIN FORM */
+/* FORMS */
 .login-form,
-.registro-form {
+.registro-form,
+.agregar-form {
   background: linear-gradient(315deg, #072d45 0%, #03a3d7 80%);
   width: 50%;
   display: flex;
@@ -86,14 +87,16 @@ header nav ul li a:hover {
 }
 
 .login-form h2,
-.registro-form h2 {
+.registro-form h2,
+.agregar-form h2 {
   color: white;
   margin-bottom: 30px;
 }
 
 
 .login-form input,
-.registro-form input {
+.registro-form input,
+.agregar-form input {
   margin-bottom: 1rem;
   border: none;
   padding: 0.5rem 1rem;
@@ -101,12 +104,14 @@ header nav ul li a:hover {
 }
 
 .login-form label,
-.registro-form label {
+.registro-form label,
+.agregar-form label {
   color: white;
 }
 
 .login-form button,
-.registro-form button {
+.registro-form button,
+.agregar-form button {
   margin-top: 20px;
   border: none;
   padding: 0.5rem 3rem;
