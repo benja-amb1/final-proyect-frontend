@@ -7,16 +7,16 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link>Inicio</Link>
+            <Link to='/'>Inicio</Link>
           </li>
           <li>
-            <Link>Dashboard</Link>
+            <Link to='/dashboard'>Dashboard</Link>
           </li>
           <li>
-            <Link>Login</Link>
+            <Link to='/login'>Login</Link>
           </li>
           <li>
-            <Link>Registro</Link>
+            <Link to='/registro'>Registro</Link>
           </li>
         </ul>
       </nav>
