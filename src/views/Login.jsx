@@ -4,7 +4,7 @@ import { Layout } from '../components/Layout'
 const Login = () => {
   return (
     <Layout>
-      <form>
+      <form className='login-form'>
         <label>Email:</label>
         <input type="email" placeholder='Email' />
         <label>Contraseña:</label>

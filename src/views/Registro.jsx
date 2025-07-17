@@ -4,7 +4,7 @@ import { Layout } from '../components/Layout'
 const Registro = () => {
   return (
     <Layout>
-      <form>
+      <form className='registro-form'>
         <label>Nombre de usuario:</label>
         <input type="text" placeholder='Nombre de usuario' />
         <label>Email:</label>
