@@ -1,3 +1,18 @@
+:root {
+  --color-1: #ecfcff;
+  --color-2: #cef6ff;
+  --color-3: #a4ebfd;
+  --color-4: #61dafb;
+  --color-5: #1fc0f1;
+  --color-6: #03a3d7;
+  --color-7: #0681b4;
+  --color-8: #0c6892;
+  --color-9: #145576;
+  --color-10: #154764;
+  --color-11: #072d45;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -36,6 +51,11 @@ header nav ul {
 
 header nav ul li a {
   color: white;
+  transition: color 300ms;
+}
+
+header nav ul li a:hover {
+  color: var(--color-4);
 }
 
 footer {
