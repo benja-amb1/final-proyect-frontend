@@ -129,3 +129,9 @@ footer {
   padding: 1rem;
   color: white;
 }
+
+@media (max-width: 768px) {
+  main {
+    padding-top: 80px;
+  }
+}
