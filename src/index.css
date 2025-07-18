@@ -70,6 +70,10 @@ header nav ul li a:hover {
   color: var(--color-4);
 }
 
+.menuHamb {
+  display: none;
+}
+
 /* FORMS */
 .login-form,
 .registro-form,
@@ -126,7 +130,8 @@ header nav ul li a:hover {
 }
 
 .login-form button:hover,
-.registro-form button:hover {
+.registro-form button:hover,
+.agregar-form button:hover {
   background-color: var(--color-6);
   transform: scale(1.1);
 }
@@ -144,6 +149,33 @@ footer {
 
 @media (max-width: 768px) {
   main {
-    padding-top: 80px;
+    padding-top: 120px;
   }
+
+  .menuHamb {
+    display: block;
+    border: none;
+    margin: 1rem auto;
+    background: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.closed {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+
 }

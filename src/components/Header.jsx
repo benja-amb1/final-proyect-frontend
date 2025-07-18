@@ -1,9 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import ReactLogo from '../assets/images/react-icon.webp'
 
 const Header = () => {
+
+  const [openHamb, setOpenHamb] = useState(false);
+
+  const toggleMenu = () => {
+    setOpenHamb(valor => !valor)
+  }
+
   return (
     <header>
 
@@ -15,8 +22,9 @@ const Header = () => {
 
 
 
-      <nav>
-        <ul>
+      <button onClick={toggleMenu} className='menuHamb'>{openHamb ? 'X' : '☰'}</button>
+      <nav className={openHamb ? 'closed' : ''}>
+        <ul >
           <li>
             <Link to='/'>Inicio</Link>
           </li>
