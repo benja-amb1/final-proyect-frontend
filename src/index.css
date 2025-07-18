@@ -161,6 +161,7 @@ footer {
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+
   }
 
   nav {
@@ -176,5 +177,17 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    animation: hambAnimation 300ms forwards ease-in-out;
+
+  }
+}
+
+@keyframes hambAnimation {
+  from {
+    transform: translateX(-300px);
+  }
+
+  to {
+    transform: translateX(0px);
   }
 }
