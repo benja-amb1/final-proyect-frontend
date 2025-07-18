@@ -169,6 +169,7 @@ footer {
 
   nav.closed {
     display: block;
+
   }
 
   nav ul {
@@ -176,6 +177,4 @@ footer {
     align-items: center;
     gap: 1rem;
   }
-
-
 }

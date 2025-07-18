@@ -22,7 +22,7 @@ const Header = () => {
 
 
 
-      <button onClick={toggleMenu} className='menuHamb'>{openHamb ? 'X' : '☰'}</button>
+      <button onClick={toggleMenu} className='menuHamb'>{openHamb ? '✖' : '☰'}</button>
       <nav className={openHamb ? 'closed' : ''}>
         <ul >
           <li>
