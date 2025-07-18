@@ -185,6 +185,13 @@ footer {
     animation: hambAnimation 300ms forwards ease-in-out;
 
   }
+
+  .login-form,
+  .agregar-form,
+  .registro-form {
+    width: 350px;
+  }
+
 }
 
 @keyframes hambAnimation {
