@@ -149,7 +149,7 @@ footer {
 
 @media (max-width: 768px) {
   main {
-    padding-top: 120px;
+    padding-top: 130px;
   }
 
   .menuHamb {
@@ -168,9 +168,14 @@ footer {
     display: none;
   }
 
+
   nav.closed {
     display: block;
 
+  }
+
+  header div img {
+    width: 5%;
   }
 
   nav ul {
@@ -190,4 +195,15 @@ footer {
   to {
     transform: translateX(0px);
   }
+}
+
+@media (max-width: 390px) {
+  main {
+    padding-top: 130px;
+  }
+
+  header div img {
+    width: 10%;
+  }
+
 }
