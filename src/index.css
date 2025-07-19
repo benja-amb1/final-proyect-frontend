@@ -42,13 +42,11 @@ header {
   margin-bottom: 60px;
   width: 100%;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header div a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 header a img {
   width: 5%;
@@ -56,9 +54,8 @@ header a img {
 
 header nav ul {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
-
+  gap: 2rem;
 }
 
 header nav ul li a {
@@ -152,6 +149,8 @@ footer {
     padding-top: 130px;
   }
 
+
+
   .menuHamb {
     display: block;
     border: none;
@@ -161,7 +160,7 @@ footer {
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
-
+    position: relative;
   }
 
   nav {
@@ -175,7 +174,7 @@ footer {
   }
 
   header div img {
-    width: 5%;
+    width: 10%;
   }
 
   nav ul {
@@ -183,7 +182,12 @@ footer {
     align-items: center;
     gap: 1rem;
     animation: hambAnimation 300ms forwards ease-in-out;
-
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    right: 0;
+    background-color: #1e1e1e;
+    padding-bottom: 2rem;
   }
 
   .login-form,
