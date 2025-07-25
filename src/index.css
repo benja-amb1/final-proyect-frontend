@@ -45,6 +45,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 
@@ -152,12 +153,18 @@ header nav ul li a:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(315deg, #072d45 0%, #03a3d7 80%);
+
   padding: 2rem;
   text-align: center;
   border-radius: 2rem;
   height: 100%;
-  color: white;
+  color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  transition: transform 300ms;
+}
+
+.producto:hover {
+  transform: scale(1.05);
 }
 
 /* FOOTER */

@@ -6,6 +6,7 @@ import ReactLogo from '../assets/images/react-icon.webp'
 const Header = () => {
 
   const [openHamb, setOpenHamb] = useState(false);
+  const [user, setUser] = useState(false);
 
   const toggleMenu = () => {
     setOpenHamb(valor => !valor)
@@ -25,18 +26,29 @@ const Header = () => {
       <button onClick={toggleMenu} className='menuHamb'>{openHamb ? '✖' : '☰'}</button>
       <nav className={openHamb ? 'closed' : ''}>
         <ul >
-          <li>
-            <Link to='/'>Inicio</Link>
-          </li>
-          <li>
-            <Link to='/dashboard'>Dashboard</Link>
-          </li>
-          <li>
-            <Link to='/login'>Login</Link>
-          </li>
-          <li>
-            <Link to='/registro'>Registro</Link>
-          </li>
+          {user && (
+            <>
+              <li>
+                <Link to='/'>Inicio</Link>
+              </li>
+              <li>
+                <Link to='/dashboard'>Dashboard</Link>
+              </li>
+              <button>Cerrar sesión</button>
+            </>
+          )}
+
+          {!user && (
+            <>
+              <li>
+                <Link to='/login'>Login</Link>
+              </li>
+              <li>
+                <Link to='/registro'>Registro</Link>
+              </li>
+            </>
+          )}
+
         </ul>
       </nav>
     </header>
