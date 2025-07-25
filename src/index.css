@@ -73,7 +73,8 @@ nav button {
   background-color: red;
   cursor: pointer;
   color: white;
-  padding: 0.2rem 0.5rem;
+  padding: 0.2rem 1rem;
+  white-space: nowrap;
 }
 
 .menuHamb {
@@ -288,6 +289,8 @@ footer {
     background-color: #1e1e1e;
     padding-bottom: 2rem;
   }
+
+
 
   .login-form,
   .agregar-form,

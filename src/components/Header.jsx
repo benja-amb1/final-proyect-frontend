@@ -34,7 +34,10 @@ const Header = () => {
               <li>
                 <Link to='/dashboard'>Dashboard</Link>
               </li>
-              <button>Cerrar sesión</button>
+              <li>
+                <button>Cerrar sesión</button>
+
+              </li>
             </>
           )}
 
