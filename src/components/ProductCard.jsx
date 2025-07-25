@@ -23,6 +23,14 @@ const ProductCard = () => {
     }
   }
 
+  const deleteProduct = async (id) => {
+    const res = await fetch('https://fakestoreapi.com/products');
+
+    if (res.ok) {
+      setProductos(prev => prev.filter(p => p.id !== id))
+    }
+  }
+
   useEffect(() => {
     obtenerProductos()
   }, [])
@@ -50,7 +58,7 @@ const ProductCard = () => {
               {!modal && (
                 <>
                   <button onClick={openModal}>Actualizar</button>
-                  <button>Eliminar</button>
+                  <button onClick={() => deleteProduct(p.id)}>Eliminar</button>
                 </>
               )}
               {modal && (
