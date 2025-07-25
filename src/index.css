@@ -167,6 +167,48 @@ header nav ul li a:hover {
   transform: scale(1.05);
 }
 
+.btn-act-del {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-act-del button {
+  padding: 0.4rem;
+}
+
+
+.btn-act-del button:nth-child(1) {
+  background-color: #072d45;
+}
+
+.btn-act-del button:nth-child(2) {
+  background-color: #d10000;
+}
+
+.form-act {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.form-act input {
+  margin: 1rem;
+  border: 1px solid gray;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+
+.form-act button:nth-child(4) {
+  background-color: green;
+}
+
+.form-act button:nth-child(5) {
+  background-color: gray;
+}
+
+
+
 /* FOOTER */
 
 footer {
@@ -252,7 +294,4 @@ footer {
   header div img {
     width: 10%;
   }
-
-
-
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const ProductCard = () => {
 
@@ -15,6 +15,17 @@ const ProductCard = () => {
     { id: 10, nombre: "Fuente 650W", precio: 38000, stock: 12 }
   ];
 
+  const [user, setUser] = useState(true);
+  const [modal, setModal] = useState(false);
+
+  const openModal = () => {
+    setModal(true);
+  }
+
+  const closeModal = () => {
+    setModal(false);
+  }
+
   return (
     <section className='productos-container'>
       {productos.map(p => (
@@ -23,6 +34,25 @@ const ProductCard = () => {
           <p>${p.precio}</p>
           <p>Stock: {p.stock}</p>
           <button>Ver Producto</button>
+          {user && (
+            <div className='btn-act-del'>
+              {!modal && (
+                <>
+                  <button onClick={openModal}>Actualizar</button>
+                  <button>Eliminar</button>
+                </>
+              )}
+              {modal && (
+                <form className='form-act'>
+                  <input type="text" placeholder='Título' />
+                  <input type="number" min={0} placeholder='Precio' />
+                  <input type="text" placeholder='Descripión' />
+                  <button>Confirmar</button>
+                  <button onClick={closeModal}>Cancelar</button>
+                </form>
+              )}
+            </div>
+          )}
         </article>
       ))}
     </section>
