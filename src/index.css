@@ -94,7 +94,7 @@ nav button {
   align-items: center;
   height: 500px;
   border-radius: 50px;
-  box-shadow: 0px 0px 22px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 px 0px 22px 0px rgba(0, 0, 0, 0.75);
 }
 
 .login-form h2,
@@ -118,6 +118,10 @@ nav button {
 .registro-form label,
 .agregar-form label {
   color: white;
+}
+
+.agregar-form label {
+  margin-bottom: 5px;
 }
 
 .login-form button,
@@ -233,6 +237,20 @@ nav button {
   margin: 0.5rem auto;
 }
 
+/* MSG ERROR Y SUCCESS */
+.msgError,
+.msgSuccess {
+  color: white;
+  margin-top: 1rem;
+  background-color: red;
+  padding: 0.2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.msgSuccess {
+  background-color: green;
+}
 
 
 /* FOOTER */
