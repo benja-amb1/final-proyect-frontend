@@ -24,7 +24,7 @@ const ProductCard = () => {
   }
 
   const deleteProduct = async (id) => {
-    const res = await fetch('https://fakestoreapi.com/products');
+    const res = await fetch('https://fakestoreapi.com/products', { method: 'DELETE' });
 
     if (res.ok) {
       setProductos(prev => prev.filter(p => p.id !== id))
