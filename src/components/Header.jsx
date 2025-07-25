@@ -6,7 +6,7 @@ import ReactLogo from '../assets/images/react-icon.webp'
 const Header = () => {
 
   const [openHamb, setOpenHamb] = useState(false);
-  const [user, setUser] = useState(false);
+  const [user, setUser] = useState(true);
 
   const toggleMenu = () => {
     setOpenHamb(valor => !valor)
