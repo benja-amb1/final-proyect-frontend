@@ -149,6 +149,11 @@ nav button {
   transform: scale(1.1);
 }
 
+/* Inicio */
+#inicio h1,
+#inicio h2 {
+  text-align: center;
+}
 
 /* PRODUCTOS */
 .productos-container {
@@ -262,6 +267,14 @@ nav button {
 
 .msgSuccess {
   background-color: green;
+}
+
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
 }
 
 
