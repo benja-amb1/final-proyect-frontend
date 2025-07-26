@@ -35,8 +35,8 @@ const ProductCard = () => {
     obtenerProductos()
   }, [])
 
-  const openModal = () => {
-    setModal(true);
+  const openModal = (id) => {
+    setModal(id);
   }
 
   const closeModal = () => {
@@ -55,13 +55,13 @@ const ProductCard = () => {
           <button>Ver Producto</button>
           {user && (
             <div className='btn-act-del'>
-              {!modal && (
+              {modal !== p.id && (
                 <>
-                  <button onClick={openModal}>Actualizar</button>
+                  <button onClick={() => openModal(p.id)}>Actualizar</button>
                   <button onClick={() => deleteProduct(p.id)}>Eliminar</button>
                 </>
               )}
-              {modal && (
+              {modal === p.id && (
                 <form className='form-act'>
                   <input type="text" placeholder='Título' />
                   <input type="number" min={0} placeholder='Precio' />
