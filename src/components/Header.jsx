@@ -2,14 +2,19 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import ReactLogo from '../assets/images/react-icon.webp'
+import { useAuth } from '../context/UserContext';
 
 const Header = () => {
 
   const [openHamb, setOpenHamb] = useState(false);
-  const [user, setUser] = useState(true);
+  const { user, logout } = useAuth();
 
   const toggleMenu = () => {
     setOpenHamb(valor => !valor)
+  }
+
+  const handleLogout = () => {
+    logout();
   }
 
   return (
@@ -35,7 +40,7 @@ const Header = () => {
                 <Link to='/dashboard'>Dashboard</Link>
               </li>
               <li>
-                <button>Cerrar sesión</button>
+                <button onClick={handleLogout}>Cerrar sesión</button>
 
               </li>
             </>

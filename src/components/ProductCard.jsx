@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
+import { useAuth } from '../context/UserContext';
 
 const ProductCard = () => {
 
-  const [user, setUser] = useState(true);
+  const { user } = useAuth();
   const [loading, setLoading] = useState(true);
   const [modal, setModal] = useState(false);
   const [productos, setProductos] = useState([]);

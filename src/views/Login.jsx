@@ -1,10 +1,19 @@
 import React from 'react'
 import { Layout } from '../components/Layout'
+import { useAuth } from '../context/UserContext'
 
 const Login = () => {
+
+  const { login } = useAuth();
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    login();
+  }
+
   return (
     <Layout>
-      <form className='login-form'>
+      <form onSubmit={handleLogin} className='login-form'>
         <h2>Login</h2>
         <label>Email:</label>
         <input type="email" placeholder='Email' />
