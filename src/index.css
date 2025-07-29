@@ -242,13 +242,13 @@ nav button {
 }
 
 
-.form-act button:nth-child(4) {
+.form-act button:nth-child(7) {
   background-color: green;
   width: 50%;
   margin: 0.5rem auto;
 }
 
-.form-act button:nth-child(5) {
+.form-act button:nth-child(8) {
   background-color: gray;
   width: 50%;
   margin: 0.5rem auto;

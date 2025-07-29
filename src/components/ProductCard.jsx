@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { FormCard } from './FormCard';
 
 const ProductCard = () => {
 
@@ -50,7 +51,7 @@ const ProductCard = () => {
       {productos.map(p => (
         <article className='producto' key={p.id}>
           <h2>{p.title}</h2>
-          <img src={p.image} alt={`Imagen de ${p.title}`} />
+          <img src={p.image} alt={`Imagen de ${p.title}`} loading='lazy' />
           <p>Precio: ${p.price}</p>
           <button>Ver Producto</button>
           {user && (
@@ -63,9 +64,9 @@ const ProductCard = () => {
               )}
               {modal === p.id && (
                 <form className='form-act'>
-                  <input type="text" placeholder='Título' />
-                  <input type="number" min={0} placeholder='Precio' />
-                  <input type="text" placeholder='Descripión' />
+
+                  <FormCard />
+
                   <button>Confirmar</button>
                   <button onClick={closeModal}>Cancelar</button>
                 </form>

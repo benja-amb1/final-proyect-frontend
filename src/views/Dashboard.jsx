@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Layout } from '../components/Layout'
+import { FormCard } from '../components/FormCard';
 
 const Dashboard = () => {
 
@@ -50,12 +51,9 @@ const Dashboard = () => {
     <Layout>
       <form className='agregar-form' onSubmit={agregarProducto}>
         <h2>Agregar Producto</h2>
-        <label>Titulo:</label>
-        <input type="text" placeholder='Titulo' value={title} onChange={e => setTitle(e.target.value)} />
-        <label>Precio:</label>
-        <input type="number" min={0} placeholder='Precio' value={price} onChange={e => setPrice(e.target.value)} />
-        <label>Imagen:</label>
-        <input type="file" placeholder='Imagen' value={image} onChange={e => setImage(e.target.value)} />
+
+        <FormCard title={title} setTitle={setTitle} price={price} setPrice={setPrice} image={image} setImage={setImage} />
+
         <button>Agregar</button>
         {error && <p className='msgError'>{error}</p>}
         {success && <p className='msgSuccess'>{success}</p>}
