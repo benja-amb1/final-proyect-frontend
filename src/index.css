@@ -239,19 +239,20 @@ nav button {
   border: 1px solid gray;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+  max-width: 100%;
 }
 
 
-.form-act button:nth-child(7) {
+.form-act div button:nth-child(1) {
   background-color: green;
   width: 50%;
-  margin: 0.5rem auto;
+  margin: 0.5rem 1rem;
 }
 
-.form-act button:nth-child(8) {
+.form-act div button:nth-child(2) {
   background-color: gray;
   width: 50%;
-  margin: 0.5rem auto;
+  margin: 0.5rem 1rem;
 }
 
 /* MSG ERROR Y SUCCESS */
