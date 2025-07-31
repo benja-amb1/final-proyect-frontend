@@ -82,6 +82,60 @@ nav button {
   display: none;
 }
 
+/* Inicio */
+.entregas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 1rem;
+}
+
+.entregas-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 900px;
+}
+
+.entrega-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.entrega-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.entregas>a {
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--color-5);
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 300ms;
+  max-width: 200px;
+  width: 100%;
+  text-decoration: none;
+}
+
+.entregas>a:hover {
+  background-color: var(--color-6);
+}
+
+
 /* FORMS */
 .login-form,
 .registro-form,
