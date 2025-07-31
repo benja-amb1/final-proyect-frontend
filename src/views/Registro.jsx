@@ -20,7 +20,7 @@ const Registro = () => {
     }, 3000);
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setSuccess('');
@@ -37,7 +37,7 @@ const Registro = () => {
       return;
     }
 
-    const isRegister = register(username, email, password);
+    const isRegister = await register(username, email, password);
     if (!isRegister) {
       setError('Error al crear el usuario.');
       return;
@@ -46,9 +46,6 @@ const Registro = () => {
     if (isRegister) {
       navigate('/')
     }
-
-
-
   }
 
 
