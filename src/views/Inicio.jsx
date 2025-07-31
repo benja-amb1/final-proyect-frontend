@@ -40,7 +40,7 @@ const Inicio = () => {
 
         </div>
 
-        <Link to='/contacto' className='btn-contactar'>Contactar</Link>
+        <Link to='/login' className='btn-contactar'>Identificarse</Link>
       </section>
     </Layout>
   )
