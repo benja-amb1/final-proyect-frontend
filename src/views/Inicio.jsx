@@ -6,7 +6,7 @@ const Inicio = () => {
   return (
     <Layout>
       <div id='inicio'>
-        <h1>Bienvenido al Trabajo Final!</h1>
+        <h1>Bienvenido a Products Map!</h1>
         <h2>Aquí encontrarás los mejores productos al mejor precio.</h2>
       </div>
       <ProductCard />
