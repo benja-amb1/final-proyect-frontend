@@ -106,30 +106,44 @@ const ProductCard = () => {
               )}
               {modal === p.id && (
                 <form className='form-act' onSubmit={handleUpdate}>
+                  <label htmlFor="titleEdit">Título:</label>
                   <input
+                    id="titleEdit"
                     type="text"
                     placeholder="Título"
                     value={titleEdit}
                     onChange={e => setTitleEdit(e.target.value)}
                   />
+
+                  <label htmlFor="priceEdit">Precio:</label>
                   <input
+                    id="priceEdit"
                     type="number"
                     placeholder="Precio"
                     value={priceEdit}
                     onChange={e => setPriceEdit(e.target.value)}
                   />
+
+                  <label htmlFor="descriptionEdit">Descripción:</label>
                   <textarea
+                    id="descriptionEdit"
                     placeholder="Descripción"
                     value={descriptionEdit}
                     onChange={e => setDescriptionEdit(e.target.value)}
                   />
+
+                  <label htmlFor="categoryEdit">Categoría:</label>
                   <input
+                    id="categoryEdit"
                     type="text"
                     placeholder="Categoría"
                     value={categoryEdit}
                     onChange={e => setCategoryEdit(e.target.value)}
                   />
+
+                  <label htmlFor="imageEdit">Imagen URL:</label>
                   <input
+                    id="imageEdit"
                     type="text"
                     placeholder="Imagen URL"
                     value={imageEdit}

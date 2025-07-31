@@ -97,6 +97,10 @@ nav button {
   box-shadow: 0 px 0px 22px 0px rgba(0, 0, 0, 0.75);
 }
 
+.agregar-form {
+  height: 800px;
+}
+
 .login-form h2,
 .registro-form h2,
 .agregar-form h2 {
@@ -107,7 +111,8 @@ nav button {
 
 .login-form input,
 .registro-form input,
-.agregar-form input {
+.agregar-form input,
+.agregar-form textarea {
   margin-bottom: 1rem;
   border: none;
   padding: 0.5rem 1rem;
@@ -120,9 +125,6 @@ nav button {
   color: white;
 }
 
-.agregar-form label {
-  margin-bottom: 5px;
-}
 
 .login-form button,
 .registro-form button,
@@ -234,7 +236,12 @@ nav button {
   align-items: center;
 }
 
-.form-act input {
+.form-act label {
+  margin-bottom: -15px;
+}
+
+.form-act input,
+.form-act textarea {
   margin: 1rem;
   border: 1px solid gray;
   padding: 0.5rem 1rem;
