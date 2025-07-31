@@ -4,6 +4,7 @@ import { Dashboard } from "../views/Dashboard"
 import { Registro } from "../views/Registro"
 import { Login } from "../views/Login"
 import { NotFound } from "../views/NotFound"
+import { PrivateRoute } from "../components/PrivateRoute"
 
 const Routing = () => {
   return (
@@ -13,7 +14,7 @@ const Routing = () => {
 
         <Route>
           <Route path="/" element={<Inicio />} />
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<PrivateRoute><Dashboard /></PrivateRoute>} />
           <Route path="/registro" element={<Registro />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
