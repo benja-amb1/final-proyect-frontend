@@ -62,6 +62,7 @@ header nav ul {
 header nav ul li a {
   color: white;
   transition: color 300ms;
+  white-space: nowrap;
 }
 
 header nav ul li a:hover {
@@ -306,8 +307,6 @@ footer {
     padding-top: 130px;
   }
 
-
-
   .menuHamb {
     display: block;
     border: none;
@@ -325,7 +324,7 @@ footer {
   }
 
 
-  nav.closed {
+  nav.open {
     display: block;
 
   }

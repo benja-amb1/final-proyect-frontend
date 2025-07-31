@@ -29,7 +29,7 @@ const Header = () => {
 
 
       <button onClick={toggleMenu} className='menuHamb'>{openHamb ? '✖' : '☰'}</button>
-      <nav className={openHamb ? 'closed' : ''}>
+      <nav className={openHamb ? 'open' : ''}>
         <ul >
           {user && (
             <>
@@ -48,6 +48,12 @@ const Header = () => {
 
           {!user && (
             <>
+              <li>
+                <Link to='/'>Inicio</Link>
+              </li>
+              <li>
+                <Link to='/sobre-nosotros'>Sobre Nosotros</Link>
+              </li>
               <li>
                 <Link to='/login'>Login</Link>
               </li>
