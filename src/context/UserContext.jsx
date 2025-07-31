@@ -5,6 +5,16 @@ const UserContext = createContext();
 const UserProvider = (props) => {
   const [user, setUser] = useState(null);
 
+  const register = async (username, email, password) => {
+
+    const res = await fetch('https://fakestoreapi.com/users', { method: 'POST', body: JSON.stringify({ username, email, password }) });
+    if (res.ok) {
+      setUser(true);
+      return user
+    }
+
+  }
+
   const login = async (username, password) => {
 
     const response = await fetch('https://fakestoreapi.com/auth/login', {
@@ -28,7 +38,7 @@ const UserProvider = (props) => {
   }
 
   return (
-    <UserContext.Provider value={{ login, logout, user }}>
+    <UserContext.Provider value={{ login, logout, user, register }}>
       {props.children}
     </UserContext.Provider>
   )

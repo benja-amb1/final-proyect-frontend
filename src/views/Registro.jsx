@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
 import { Layout } from '../components/Layout'
+import { useAuth } from '../context/UserContext';
+import { useNavigate } from 'react-router-dom';
 
 const Registro = () => {
 
-  const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [user, setUser] = useState(null);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const navigate = useNavigate();
+  const { register } = useAuth();
 
   const clearMsg = () => {
     setTimeout(() => {
@@ -17,13 +20,12 @@ const Registro = () => {
     }, 3000);
   }
 
-  const handleSubmit = async (e) => {
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
     setError('');
     setSuccess('');
 
-    e.preventDefault();
-    if (!name || !email || !password) {
+    if (!username || !email || !password) {
       setError('Todos los campos son requeridos.')
       clearMsg();
       return;
@@ -35,24 +37,20 @@ const Registro = () => {
       return;
     }
 
-    try {
-      const res = await fetch('https://fakestoreapi.com/users', { method: 'POST', body: JSON.stringify(name, email, password) });
-
-      const data = await res.json();
-
-      if (res.ok) {
-        setSuccess('Usuario creado correctamente.')
-        clearMsg()
-      }
-
-      setUser(data)
-      console.log(data);
-    } catch (error) {
-      console.log(error);
-      setError('Error al crear usuario.')
-      clearMsg();
+    const isRegister = register(username, email, password);
+    if (!isRegister) {
+      setError('Error al crear el usuario.');
+      return;
     }
+
+    if (isRegister) {
+      navigate('/')
+    }
+
+
+
   }
+
 
 
   return (
@@ -60,7 +58,7 @@ const Registro = () => {
       <form className='registro-form' onSubmit={handleSubmit}>
         <h2>Registrarse</h2>
         <label>Nombre de usuario:</label>
-        <input type="text" placeholder='Nombre de usuario' onChange={e => setName(e.target.value)} value={name} />
+        <input type="text" placeholder='Nombre de usuario' onChange={e => setUsername(e.target.value)} value={username} />
         <label>Email:</label>
         <input type="email" placeholder='Email' onChange={e => setEmail(e.target.value)} value={email} />
         <label>Contraseña:</label>
