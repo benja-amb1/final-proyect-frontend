@@ -7,10 +7,10 @@ const UserProvider = (props) => {
 
   const register = async (username, email, password) => {
 
-    const res = await fetch('https://fakestoreapi.com/users', { method: 'POST', body: JSON.stringify({ username, email, password }) });
+    const res = await fetch('https://fakestoreapi.com/users', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ username, email, password }) });
     if (res.ok) {
       setUser(true);
-      return user
+      return true
     }
 
   }

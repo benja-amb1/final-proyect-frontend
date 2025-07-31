@@ -44,7 +44,10 @@ const Registro = () => {
     }
 
     if (isRegister) {
-      navigate('/')
+      setSuccess('Usuario creado correctamente.');
+      setTimeout(() => {
+        navigate('/')
+      }, 2000);
     }
   }
 
