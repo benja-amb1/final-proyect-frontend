@@ -92,7 +92,7 @@ nav button {
 
 .entregas-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   width: 100%;
   max-width: 900px;
@@ -435,7 +435,9 @@ footer {
     padding-bottom: 2rem;
   }
 
-
+  .entregas-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .login-form,
   .agregar-form,
@@ -466,5 +468,9 @@ footer {
 
   header div img {
     width: 10%;
+  }
+
+  .entregas-cards {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
