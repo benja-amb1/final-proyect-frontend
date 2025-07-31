@@ -291,6 +291,14 @@ nav button {
   align-items: center;
 }
 
+.buscarInput {
+  display: block;
+  margin: 1rem auto;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #1e1e1e;
+}
+
 .form-act label {
   margin-bottom: -10px;
 }

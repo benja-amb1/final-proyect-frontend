@@ -13,6 +13,7 @@ const ProductCard = () => {
   const [descriptionEdit, setDescriptionEdit] = useState("");
   const [categoryEdit, setCategoryEdit] = useState("");
   const [imageEdit, setImageEdit] = useState("");
+  const [search, setSearch] = useState("");
 
   const obtenerProductos = async () => {
     try {
@@ -85,81 +86,89 @@ const ProductCard = () => {
     }
   }
 
+
+  const productosBuscados = productos.filter(producto => producto.title.toLowerCase().includes(search.toLowerCase()));
+
+
   if (loading) return <p>Cargando productos...</p>
 
   return (
-    <section className='productos-container'>
-      {productos.map(p => (
-        <article className='producto' key={p.id}>
-          <h2>{p.title}</h2>
-          <img src={p.image} alt={`Imagen de ${p.title}`} loading='lazy' />
-          <p>Precio: ${p.price}</p>
-          <p>{p.description}</p>
-          <p>Categoría: {p.category}</p>
-          {user && (
-            <div className='btn-act-del'>
-              {modal !== p.id && (
-                <>
-                  <button onClick={() => openModal(p)}>Actualizar</button>
-                  <button onClick={() => deleteProduct(p.id)}>Eliminar</button>
-                </>
-              )}
-              {modal === p.id && (
-                <form className='form-act' onSubmit={handleUpdate}>
-                  <label htmlFor="titleEdit">Título:</label>
-                  <input
-                    id="titleEdit"
-                    type="text"
-                    placeholder="Título"
-                    value={titleEdit}
-                    onChange={e => setTitleEdit(e.target.value)}
-                  />
+    <>
+      <input className='buscarInput' type="text" placeholder='Buscar...' value={search} onChange={e => setSearch(e.target.value)} />
+      <section className='productos-container'>
 
-                  <label htmlFor="priceEdit">Precio:</label>
-                  <input
-                    id="priceEdit"
-                    type="number"
-                    placeholder="Precio"
-                    value={priceEdit}
-                    onChange={e => setPriceEdit(e.target.value)}
-                  />
+        {productosBuscados.length === 0 ? <p>No se encontraron productos...</p> : productosBuscados.map(p => (
+          <article className='producto' key={p.id}>
+            <h2>{p.title}</h2>
+            <img src={p.image} alt={`Imagen de ${p.title}`} loading='lazy' />
+            <p>Precio: ${p.price}</p>
+            <p>{p.description}</p>
+            <p>Categoría: {p.category}</p>
+            {user && (
+              <div className='btn-act-del'>
+                {modal !== p.id && (
+                  <>
+                    <button onClick={() => openModal(p)}>Actualizar</button>
+                    <button onClick={() => deleteProduct(p.id)}>Eliminar</button>
+                  </>
+                )}
+                {modal === p.id && (
+                  <form className='form-act' onSubmit={handleUpdate}>
+                    <label htmlFor="titleEdit">Título:</label>
+                    <input
+                      id="titleEdit"
+                      type="text"
+                      placeholder="Título"
+                      value={titleEdit}
+                      onChange={e => setTitleEdit(e.target.value)}
+                    />
 
-                  <label htmlFor="descriptionEdit">Descripción:</label>
-                  <textarea
-                    id="descriptionEdit"
-                    placeholder="Descripción"
-                    value={descriptionEdit}
-                    onChange={e => setDescriptionEdit(e.target.value)}
-                  />
+                    <label htmlFor="priceEdit">Precio:</label>
+                    <input
+                      id="priceEdit"
+                      type="number"
+                      placeholder="Precio"
+                      value={priceEdit}
+                      onChange={e => setPriceEdit(e.target.value)}
+                    />
 
-                  <label htmlFor="categoryEdit">Categoría:</label>
-                  <input
-                    id="categoryEdit"
-                    type="text"
-                    placeholder="Categoría"
-                    value={categoryEdit}
-                    onChange={e => setCategoryEdit(e.target.value)}
-                  />
+                    <label htmlFor="descriptionEdit">Descripción:</label>
+                    <textarea
+                      id="descriptionEdit"
+                      placeholder="Descripción"
+                      value={descriptionEdit}
+                      onChange={e => setDescriptionEdit(e.target.value)}
+                    />
 
-                  <label htmlFor="imageEdit">Imagen URL:</label>
-                  <input
-                    id="imageEdit"
-                    type="text"
-                    placeholder="Imagen URL"
-                    value={imageEdit}
-                    onChange={e => setImageEdit(e.target.value)}
-                  />
-                  <div>
-                    <button type="submit">Confirmar</button>
-                    <button type="button" onClick={closeModal}>Cancelar</button>
-                  </div>
-                </form>
-              )}
-            </div>
-          )}
-        </article>
-      ))}
-    </section>
+                    <label htmlFor="categoryEdit">Categoría:</label>
+                    <input
+                      id="categoryEdit"
+                      type="text"
+                      placeholder="Categoría"
+                      value={categoryEdit}
+                      onChange={e => setCategoryEdit(e.target.value)}
+                    />
+
+                    <label htmlFor="imageEdit">Imagen URL:</label>
+                    <input
+                      id="imageEdit"
+                      type="text"
+                      placeholder="Imagen URL"
+                      value={imageEdit}
+                      onChange={e => setImageEdit(e.target.value)}
+                    />
+                    <div>
+                      <button type="submit">Confirmar</button>
+                      <button type="button" onClick={closeModal}>Cancelar</button>
+                    </div>
+                  </form>
+                )}
+              </div>
+            )}
+          </article>
+        ))}
+      </section>
+    </>
   )
 }
 
