@@ -15,6 +15,7 @@ const Inicio = () => {
           <h2>Aquí encontrarás los mejores productos al mejor precio.</h2>
         </div>
       </section>
+
       <ProductCard />
 
       <section className='entregas'>

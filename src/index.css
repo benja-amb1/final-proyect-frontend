@@ -292,14 +292,14 @@ nav button {
 }
 
 .form-act label {
-  margin-bottom: -15px;
+  margin-bottom: -10px;
 }
 
 .form-act input,
 .form-act textarea {
-  margin: 1rem;
+  margin: 0.5rem;
   border: 1px solid gray;
-  padding: 0.5rem 1rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 0.5rem;
   max-width: 100%;
 }
