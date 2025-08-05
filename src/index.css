@@ -141,13 +141,13 @@ nav button {
 .registro-form,
 .agregar-form {
   background: linear-gradient(315deg, #072d45 0%, #03a3d7 80%);
-  width: 50%;
+  width: 30%;
   display: flex;
   margin: 2rem auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 500px;
+  height: 100dvh;
   border-radius: 50px;
   box-shadow: 0 px 0px 22px 0px rgba(0, 0, 0, 0.75);
 }
@@ -360,6 +360,7 @@ nav button {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 1rem;
+  height: 100dvh;
 }
 
 #sobre-nosotros h1 {
