@@ -238,6 +238,16 @@ nav button {
   position: relative;
 }
 
+.producto p:nth-child(3) {
+  font-weight: bold;
+  color: #072d45;
+  font-size: larger;
+}
+
+.producto p:nth-child(5) {
+  font-weight: bold;
+}
+
 .producto h2 {
   font-size: 15px;
   text-align: center;

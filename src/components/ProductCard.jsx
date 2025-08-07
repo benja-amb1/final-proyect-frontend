@@ -102,7 +102,7 @@ const ProductCard = () => {
             <h2>{p.title}</h2>
             <img src={p.image} alt={`Imagen de ${p.title}`} loading='lazy' />
             <p>Precio: ${p.price}</p>
-            <p>{p.description}</p>
+            <p>{p.description.slice(0, 100)}...</p>
             <p>Categoría: {p.category}</p>
             {user && (
               <div className='btn-act-del'>
